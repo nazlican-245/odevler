@@ -1,0 +1,49 @@
+let veriAl=document.getElementById(`veri`)
+let ekleTus= document.getElementById(`ekle`)
+let listeEkle=document.getElementById(`liste`)
+let toastBox=document.getElementById(`toastBox`)
+
+function createDeleteButton(){
+   // var img= new Image();
+   // img.src = "carp.jpg";
+    const img = document.createElement("img");
+    img.src = "carp.jpg";
+    img.width=20;
+    img.addEventListener('click', function(){ //butonun click eventi olsun, tıklandığında parent elementini silsin
+        var deletedListElement = this.parentElement;
+        deletedListElement.remove();
+    })
+    return img;
+}
+function temizle(){
+    let bosluk=document.getElementById(`veri`);
+    bosluk.value="";
+}
+function showContent() {
+    let toast=document.createElement(`uyari`);
+    toast.classList.add(`uyariCss`);
+    toast.innerHTML=`Her zaman yapılacak bir şey vardır !!!`;
+    toast.appendChild(createDeleteButton());
+    toastBox.appendChild(toast);
+    }
+ekleTus.onclick=function(){
+    if (veriAl.length==1){
+        let newLi=document.createElement(`newLi`)
+        newLi.innerHTML="Her zaman yapılacak bir şey vardır !!!";
+        listeEkle.appendChild(newLi);
+        newLi.appendChild(createDeleteButton());
+        
+        temizle();
+    }
+    else if(veriAl.value==0){
+        showContent();
+    }
+    else{
+        let li=document.createElement(`li`)
+        li.textContent= veriAl.value;
+        listeEkle.appendChild(li);
+        li.appendChild(createDeleteButton());
+        
+        temizle();
+    }
+}
