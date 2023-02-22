@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    #genel{background-color: rgb(255, 111, 0);
+        color:white; 
+        width: 800px;
+        margin-top:0; 
+        border:2px solid black;
+        box-shadow: 1px 2px 5px;
+        margin-left:20%;
+        
+    }
+    #baslik{padding-left: 30%;padding-bottom: 2%;}
+    h2{padding-left:10%;font-size:xx-large}
+    
+    #veri{width:230px;}
+   
+    #liste{
+        
+        width:798.5px;
+        padding-left:0;
+        float:left;
+        
+    }
+    #liste>li{
+        list-style-type: none ;
+        background-color: bisque; 
+        height:max-content;
+        width:699px;
+        border:2px solid rgb(197, 0, 0);
+        font-weight: bold;
+        color:rgb(1, 58, 41);
+        padding-left:100px;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+    #liste>li:hover{background-color: black;color:white}
+    #liste>li>img{float:right; width:10;
+    padding-left:15px;}
+    #liste>#newLi{background-color: black;color:white}
+    
+    div#toastBox>.uyariCss{
+        
+        float:left;
+        border:2px solid black;
+        border-radius: 15%;
+       padding:5px;
+        width:159px;
+        box-shadow: 0px 3px 5px;
+        position: relative;
+    }
+    #toastBox{ 
+        
+        display: flex;
+        padding-left:105px;
+      
+        flex-direction: column-reverse;}
+</style>
+<body>
+<div id="genel">
+    <div id="baslik">
+        <h2>Kodluyoruz</h2>
+        <h1>Yapılacaklar Listesi</h1>
+        <div><input type="text" name="kt" id="veri" ><button id="ekle">Ekle</button> 
+        </div>
+    </div>
+
+    <div id="lst"><ul id="liste"></ul></div></div>
+        
+
+
+      
+    <div id="toastBox"></div>
+
+    <script type="text/javascript" src="javascript_deneme.js"></script>
+</body>
+</html>
