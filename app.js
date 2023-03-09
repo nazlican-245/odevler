@@ -1,4 +1,4 @@
-
+import React from 'react';
 const { default: axios } = require("axios");
 
 async function getVeri(n) {
