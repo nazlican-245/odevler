@@ -1,0 +1,11 @@
+select round(avg(rental_rate),3) from film;
+##to calculate the average of rental_rate.
+
+select count(title) from film where title like 'C%';
+##to count title's elements which begining with C.
+
+select max(length) from film where rental_rate=0.99;
+##to find elemant that its rental_rate equals to 0.99 and length value is max value.
+
+select distinct (replacement_cost) from film where length>150;
+##to count diffirent data types which their lengths are bigger than 150.
