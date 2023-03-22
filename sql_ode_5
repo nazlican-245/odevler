@@ -1,0 +1,11 @@
+select *from film where title like '%n' order by length desc limit 5 ;
+
+####to sort 5 first elemant which film names end with 'n' and have the longest lengths in film table.
+
+select title ,length from film where title like '%n' order by length asc offset 5 limit 5;
+
+####to sort second five elements which film names end with 'n' and have the shortest lengths in film table
+
+select last_name,store_id from customer where store_id = '1' order by last_name desc limit 4;
+
+####to sort the first four elemants which store_id equals to one.
