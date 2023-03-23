@@ -1,0 +1,9 @@
+--create table employee (
+--	id INT,
+--	name VARCHAR(50),
+--	email VARCHAR(50),
+--	birth_day DATE
+--);
+
+--update employee set name = 'xxxxxxxx' where name ilike 'a%' returning *;
+--delete from employee where id%2 != 0 returning *;
