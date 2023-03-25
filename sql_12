@@ -1,0 +1,8 @@
+
+SELECT COUNT(length) FROM film WHERE length > (SELECT AVG(length) from film);
+
+SELECT COUNT(*) FROM film WHERE rental_rate = (SELECT MAX(rental_rate) FROM film);
+
+SELECT rental_rate,replacement_cost FROM film WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) AND replacement_cost = (SELECT MIN(replacement_cost) FROM film);
+
+SELECT customer_id, COUNT(*) as most_payments FROM payment GROUP BY customer_id ORDER BY most_payments DESC;
